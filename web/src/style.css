@@ -252,15 +252,14 @@ body {
   }
 }
 
-/* ---- footer ---- */
+/* ---- footer: two lines on desktop (the second one wraps on narrow screens) ---- */
 
 .foot {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.25rem;
   padding-top: 1rem;
   border-top: 2px solid var(--anil);
-  font-size: 0.85rem;
 }
 
 .foot p {
@@ -272,7 +271,7 @@ body {
 }
 
 .foot .legal {
-  max-width: 62ch;
+  font-size: 0.8rem;
 }
 
 .foot a {

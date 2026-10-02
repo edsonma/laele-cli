@@ -87,10 +87,12 @@ describe('page wiring', () => {
     expect(foot.textContent).toContain('Edson Ma')
     expect(foot.textContent).toContain('Malek Technologies')
     expect(foot.textContent).toMatch(/GNU Bash/)
-    expect(foot.textContent).toMatch(/GPL, versão 3 ou posterior/)
+    expect(foot.textContent).toMatch(/GPL v3\+/)
+    expect(foot.querySelectorAll('p')).toHaveLength(2) // credit line + Bash notice line
     const links = [...foot.querySelectorAll('a')].map((a) => a.getAttribute('href'))
     expect(links).toContain('https://www.gnu.org/licenses/gpl-3.0.html')
     expect(links).toContain('https://www.gnu.org/software/bash/')
+    expect(links).toContain('https://github.com/edsonma/laele-cli')
   })
 
   it('every suggestion chip is a command the shell actually understands', async () => {
