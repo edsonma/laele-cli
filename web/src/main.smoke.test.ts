@@ -70,11 +70,27 @@ describe('page wiring', () => {
     }
     const names = figs.map((f) => f.querySelector('strong')!.textContent)
     expect(names).toEqual(['Capoeira', 'Pelourinho', 'Acarajé'])
-    // published pages can't load remote images, so everything has to be inline
+    // published pages can't load remote resources, so nothing may be fetched from outside
+    // (ordinary <a href> links, like the footer's, are fine: they only navigate when clicked)
     expect(document.querySelectorAll('img')).toHaveLength(0)
-    expect(document.body.innerHTML).not.toMatch(/(?:src|href|xlink:href)="https?:\/\/(?!github\.com)/)
+    const fetched = [...document.querySelectorAll('[src], link[href], use[href], image[href]')].filter((e) =>
+      /^(https?:)?\/\//.test(e.getAttribute('src') ?? e.getAttribute('href') ?? ''),
+    )
+    expect(fetched).toHaveLength(0)
+    expect(document.body.innerHTML).not.toMatch(/url\(\s*["']?https?:/)
     const ids = [...document.querySelectorAll('[id]')].map((e) => e.id)
     expect(new Set(ids).size).toBe(ids.length) // inline SVGs must not share ids
+  })
+
+  it('footer credits the author and company and states the Bash GPL licensing', () => {
+    const foot = document.querySelector('footer')!
+    expect(foot.textContent).toContain('Edson Ma')
+    expect(foot.textContent).toContain('Malek Technologies')
+    expect(foot.textContent).toMatch(/GNU Bash/)
+    expect(foot.textContent).toMatch(/GPL, versão 3 ou posterior/)
+    const links = [...foot.querySelectorAll('a')].map((a) => a.getAttribute('href'))
+    expect(links).toContain('https://www.gnu.org/licenses/gpl-3.0.html')
+    expect(links).toContain('https://www.gnu.org/software/bash/')
   })
 
   it('every suggestion chip is a command the shell actually understands', async () => {

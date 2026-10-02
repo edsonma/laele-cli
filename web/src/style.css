@@ -256,9 +256,23 @@ body {
 
 .foot {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.5rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--anil);
   font-size: 0.85rem;
+}
+
+.foot p {
+  margin: 0;
+}
+
+.foot .credit {
+  font-size: 0.95rem;
+}
+
+.foot .legal {
+  max-width: 62ch;
 }
 
 .foot a {

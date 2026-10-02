@@ -1,0 +1,31 @@
+laele-cli
+Copyright (c) 2026 Edson Ma, Malek Technologies
+
+THIRD-PARTY SOFTWARE
+
+GNU Bash
+  The command-line version (the Go program) starts the GNU Bash that is already
+  installed on the user's machine and talks to it through a pseudo-terminal.
+  Bash is not included in, linked into or distributed with this repository.
+
+  Bash is Copyright (C) Free Software Foundation, Inc. and is licensed under the
+  GNU General Public License, version 3 or (at your option) any later version.
+    Bash:    https://www.gnu.org/software/bash/
+    License: https://www.gnu.org/licenses/gpl-3.0.html
+
+  The web version does not use any Bash code. Its shell is an independent
+  implementation written in TypeScript.
+
+Web version dependencies (bundled into the built site)
+  xterm.js, @xterm/addon-fit, @xterm/addon-unicode11 ... MIT License
+  Bagel Fat One (font), Copyright 2022 The Bagel Fat Project Authors
+      SIL Open Font License 1.1, https://openfontlicense.org
+  Spline Sans Mono (font), Copyright 2022 The Spline Sans Mono Project Authors
+      SIL Open Font License 1.1, https://openfontlicense.org
+  (fonts are distributed through the @fontsource npm packages)
+
+Go dependency
+  github.com/creack/pty ... MIT License, Copyright (c) 2011 Keith Rarick
+
+The Docker image used for the Railway deployment is based on the official Caddy
+image (Apache License 2.0); Caddy is not included in this repository.

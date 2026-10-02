@@ -147,3 +147,12 @@ To try the same container locally: `make docker-run`, then open http://localhost
 
 `laele` é um bash "turbinado": a cada comando, solta uma gíria de Salvador no
 meio da saída. É barril, viu! Use `laele -list` pra ver todas as gírias.
+
+## Credits and licenses
+
+Copyright (c) 2026 Edson Ma, Malek Technologies.
+
+The Go CLI runs your own installed **GNU Bash** (GPL-3.0-or-later) as a separate process.
+Bash is not bundled here, and the web version contains no Bash code. Details for Bash and for
+the other third-party pieces (xterm.js, the Bagel Fat One and Spline Sans Mono fonts, and
+`creack/pty`) are in [`NOTICE`](NOTICE).
