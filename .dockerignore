@@ -1,0 +1,11 @@
+.git
+.github
+**/node_modules
+web/dist
+dist
+/laele
+*.md
+Makefile
+*.go
+go.mod
+go.sum

@@ -1,0 +1,25 @@
+# Static file server for the built site. Railway (and most PaaS) tell the app
+# which port to listen on through $PORT; 8080 is the local default.
+{
+	admin off
+}
+
+:{$PORT:8080} {
+	root * {$SITE_ROOT:/srv}
+	encode zstd gzip
+	file_server
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+
+	# Vite fingerprints everything under /assets, so it can be cached forever.
+	# Everything else (the HTML at "/" included) must be revalidated, otherwise a
+	# stale page could point at asset files that a newer deploy has removed.
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=31536000, immutable"
+	@page not path /assets/*
+	header @page Cache-Control "no-cache"
+}

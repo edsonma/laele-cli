@@ -1,6 +1,6 @@
 BIN := laele
 
-.PHONY: build test install dist clean web-install web-dev web-test web-build
+.PHONY: build test install dist clean web-install web-dev web-test web-build docker-run
 
 build:
 	go build -o $(BIN) .
@@ -35,3 +35,8 @@ web-test:
 
 web-build:
 	cd web && npm run build
+
+# Build and run the same container Railway uses, at http://localhost:8080
+docker-run:
+	docker build -t laele-web .
+	docker run --rm -e PORT=8080 -p 8080:8080 laele-web

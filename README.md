@@ -112,6 +112,32 @@ git commit -m "Add Pages deploy workflow"; and git push
 (It is kept under `web/deploy/` because pushing files into `.github/workflows` needs a token
 with the `workflow` scope.)
 
+## Deploy on Railway
+
+The repo root has a `Dockerfile` and a `railway.json`. Railway builds the web version and
+serves the static files with Caddy on the port it provides in `$PORT`.
+
+In the dashboard:
+
+1. **New Project -> Deploy from GitHub repo** and pick `edsonma/laele-cli` (authorize the
+   Railway GitHub app if it asks).
+2. Leave **Root Directory** empty. Do not set it to `web/`: the build needs `slang.json`, which
+   lives at the repo root.
+3. When the first deploy is green, open the service -> **Settings -> Networking -> Generate
+   Domain**.
+
+Or from the terminal:
+
+```fish
+npm install -g @railway/cli
+railway login
+railway init
+railway up
+railway domain
+```
+
+To try the same container locally: `make docker-run`, then open http://localhost:8080.
+
 ## Roadmap
 
 - [x] Go CLI
