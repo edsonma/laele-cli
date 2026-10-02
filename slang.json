@@ -1,0 +1,142 @@
+[
+  {
+    "term": "É barril",
+    "meaning": "Situação difícil, complicada ou algo impressionante e admirável.",
+    "phrases": [
+      "Mainha, esse comando é barril, viu!",
+      "Eita, que coisa barril!",
+      "Tá barril demais esse terminal, viu!"
+    ]
+  },
+  {
+    "term": "Barril dobrado",
+    "meaning": "Pessoa muito desenrolada, ágil ou que resolve as coisas com facilidade.",
+    "phrases": [
+      "Esse shell é barril dobrado, resolve tudo, viu!",
+      "Ói o barril dobrado resolvendo na hora!"
+    ]
+  },
+  {
+    "term": "Lá ele",
+    "meaning": "Expressão usada para afastar duplo sentido em uma frase ou para dizer \"Deus me livre\" / \"eu não\".",
+    "phrases": [
+      "Apagar tudo sem backup? Lá ele!",
+      "Dar rm -rf na raiz? Lá ele, viu!",
+      "Lá ele, nem pensar!"
+    ]
+  },
+  {
+    "term": "Comer água",
+    "meaning": "Beber bebida alcoólica em grande quantidade.",
+    "phrases": [
+      "Ontem comeu água demais e hoje o servidor tá de ressaca, viu!",
+      "Quem come água assim não lembra nem da senha, viu!"
+    ]
+  },
+  {
+    "term": "Se pique",
+    "meaning": "Ir embora correndo, vazar, sair de algum lugar.",
+    "phrases": [
+      "Terminou aqui, se pique!",
+      "Processo zumbi? Se pique daí, viu!"
+    ]
+  },
+  {
+    "term": "Se plante",
+    "meaning": "Ficar quieto, parado no canto ou no seu lugar.",
+    "phrases": [
+      "Ô processo, se plante aí no seu canto!",
+      "Se plante no diretório, viu!"
+    ]
+  },
+  {
+    "term": "Brocou / Brocar",
+    "meaning": "Mandar muito bem em alguma atividade, arrasar.",
+    "phrases": [
+      "Brocou nesse comando, viu!",
+      "Brocar no terminal é com você!",
+      "Brocou! Saiu de primeira!"
+    ]
+  },
+  {
+    "term": "Largar o doce",
+    "meaning": "Falar toda a verdade ou dizer o que está entalado na garganta.",
+    "phrases": [
+      "Larga o doce: qual foi o erro de verdade?",
+      "Largou o doce, o log contou tudo, viu!"
+    ]
+  },
+  {
+    "term": "Pegar a visão",
+    "meaning": "Ficar atento, prestar muita atenção nos detalhes.",
+    "phrases": [
+      "Pega a visão do output aí em cima, viu!",
+      "Pegar a visão antes de dar enter, viu!"
+    ]
+  },
+  {
+    "term": "Boca de me dê",
+    "meaning": "Pessoa pidona, que quer ganhar ou pedir tudo dos outros.",
+    "phrases": [
+      "Esse programa é boca de me dê: quer toda a memória!",
+      "Que boca de me dê esse processo, pedindo CPU o tempo todo!"
+    ]
+  },
+  {
+    "term": "Bater um baba",
+    "meaning": "Jogar uma partida de futebol amador (a famosa pelada).",
+    "phrases": [
+      "Compilou? Bora bater um baba, viu!",
+      "Depois do deploy, um baba pra relaxar!"
+    ]
+  },
+  {
+    "term": "Crocodilagem",
+    "meaning": "Ato de traição, falsidade ou enganar alguém pelas costas.",
+    "phrases": [
+      "Que crocodilagem, mexeram no meu branch!",
+      "Cuidado com a crocodilagem, esse script faz o que não devia, viu!"
+    ]
+  },
+  {
+    "term": "Na cocó",
+    "meaning": "Agir às escondidas, no sigilo ou de forma dissimulada.",
+    "phrases": [
+      "Esse cron roda na cocó, ninguém vê, viu!",
+      "Commitou na cocó e ninguém percebeu!"
+    ]
+  },
+  {
+    "term": "Baratino",
+    "meaning": "Conversa fiada, enrolação ou desculpa mentirosa.",
+    "phrases": [
+      "Isso aí é baratino, o teste nem rodou!",
+      "Sem baratino: o build quebrou, viu!"
+    ]
+  },
+  {
+    "term": "Laranjada",
+    "meaning": "Situação de perigo, encrenca ou grande problema.",
+    "phrases": [
+      "Eita, laranjada! Mexeu no /etc, viu!",
+      "Vixe, deu laranjada no merge!"
+    ]
+  },
+  {
+    "term": "Aondeee",
+    "meaning": "Expressão de total descrença ou negação (\"imagina\", \"de jeito nenhum\").",
+    "phrases": [
+      "Funcionou de primeira? Aondeee!",
+      "Zero bugs? Aondeee?"
+    ]
+  },
+  {
+    "term": "Viu",
+    "meaning": "Usado no final de quase todas as frases para pedir confirmação ou atenção (equivalente a \"ok?\" ou \"entendeu?\").",
+    "phrases": [
+      "Tá feito, viu!",
+      "Resultado aí em cima, viu?",
+      "Comando executado, viu?"
+    ]
+  }
+]
