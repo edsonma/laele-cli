@@ -138,5 +138,253 @@
       "Resultado aí em cima, viu?",
       "Comando executado, viu?"
     ]
+  },
+  {
+    "term": "Ó paí ó",
+    "meaning": "Jeito baianês de dizer \"olhe para isso, olhe\"; usado como forma de reclamação.",
+    "phrases": [
+      "Ó paí ó, o build quebrou de novo!",
+      "Ó paí ó, esse log tá um absurdo, viu!"
+    ]
+  },
+  {
+    "term": "É niuma",
+    "meaning": "Forma de dizer que está tudo bem, tudo tranquilo, sem problemas.",
+    "phrases": [
+      "Deploy em produção? É niuma, viu!",
+      "Compilou tudo? É niuma!"
+    ]
+  },
+  {
+    "term": "Meu Rei",
+    "meaning": "Jeito de dizer \"meu amigo\"; usado para cumprimentar alguém.",
+    "phrases": [
+      "Salve, meu rei! Terminal pronto, viu!",
+      "Meu rei, o comando rodou de boa!"
+    ]
+  },
+  {
+    "term": "Oxente / Oxe",
+    "meaning": "Exclamação usada para demonstrar surpresa ou indignação.",
+    "phrases": [
+      "Oxente, cadê meu arquivo?",
+      "Oxe, esse erro veio de onde, viu?"
+    ]
+  },
+  {
+    "term": "Massa",
+    "meaning": "Legal, empolgante, interessante.",
+    "phrases": [
+      "Esse output ficou massa demais, viu!",
+      "Que script massa, meu rei!"
+    ]
+  },
+  {
+    "term": "Boca-de-afofô",
+    "meaning": "Modo de chamar alguém que fala alto demais ou é fofoqueiro.",
+    "phrases": [
+      "Esse log é boca-de-afofô, conta tudo pra todo mundo!",
+      "Que boca-de-afofô esse stderr, gritando erro pra todo lado!"
+    ]
+  },
+  {
+    "term": "Avexado",
+    "meaning": "Alguém apressado, impaciente ou agoniado; também pode ser sinônimo de pessoa tímida.",
+    "phrases": [
+      "Não seja avexado, deixa o build terminar, viu!",
+      "Calma, avexado, o download já tá acabando!"
+    ]
+  },
+  {
+    "term": "Migueloso(a)",
+    "meaning": "Quem gosta de enrolar, enganar os outros.",
+    "phrases": [
+      "Esse teste é migueloso: passa, mas não testa nada!",
+      "Que script migueloso, enrolou e não fez nada, viu!"
+    ]
+  },
+  {
+    "term": "É bala",
+    "meaning": "Usado para falar bem de algo ou alguém.",
+    "phrases": [
+      "Esse servidor é bala, viu!",
+      "Teu código é bala, meu rei!"
+    ]
+  },
+  {
+    "term": "Dar um zig",
+    "meaning": "Ato de fugir de algo ou alguém.",
+    "phrases": [
+      "O processo deu um zig e sumiu, viu!",
+      "Vi o erro e dei um zig daqui!"
+    ]
+  },
+  {
+    "term": "Armengado",
+    "meaning": "O mesmo que mal feito, gambiarra.",
+    "phrases": [
+      "Esse script tá armengado, viu!",
+      "Gambiarra armengada, mas funcionou!"
+    ]
+  },
+  {
+    "term": "Azuado",
+    "meaning": "Sinônimo de louco, maluco.",
+    "phrases": [
+      "Tá azuado? Rodar isso em produção?",
+      "Que processo azuado, gastando CPU à toa!"
+    ]
+  },
+  {
+    "term": "Cabrunco",
+    "meaning": "Sinônimo de \"coisa ruim\". Pode ser usado como xingamento (\"Ô, seu cabrunco!\").",
+    "phrases": [
+      "Ô, seu cabrunco de bug, viu!",
+      "Esse cabrunco de erro voltou!"
+    ]
+  },
+  {
+    "term": "Cara de carranca",
+    "meaning": "Pessoa feia.",
+    "phrases": [
+      "Esse stack trace tá com cara de carranca, viu!",
+      "Que erro com cara de carranca!"
+    ]
+  },
+  {
+    "term": "Castelando / Castelano",
+    "meaning": "O mesmo que refletir, filosofar, colocar os pensamentos em dia.",
+    "phrases": [
+      "Tá castelando antes do próximo comando, é?",
+      "Parou pra castelar antes do enter, viu!"
+    ]
+  },
+  {
+    "term": "Chouriçar",
+    "meaning": "Dar em cima de alguém, paquerar.",
+    "phrases": [
+      "Parou de programar pra chouriçar, viu!",
+      "Em vez de debugar, ficou chouriçando, né?"
+    ]
+  },
+  {
+    "term": "Estar na bruxa",
+    "meaning": "Estar irritado.",
+    "phrases": [
+      "O servidor tá na bruxa hoje, viu!",
+      "Tô na bruxa com esse erro de permissão!"
+    ]
+  },
+  {
+    "term": "Estopô",
+    "meaning": "Um tipo de xingamento considerado bem ruim.",
+    "phrases": [
+      "Eita, esse bug é um estopô, viu!",
+      "Chamar o compilador de estopô não resolve, viu!"
+    ]
+  },
+  {
+    "term": "Filhote de xibum",
+    "meaning": "Forma usada para ofender alguém chamando-o de feio.",
+    "phrases": [
+      "Que filhote de xibum de interface, viu!",
+      "Esse código é um filhote de xibum, mas funciona!"
+    ]
+  },
+  {
+    "term": "Me faça uma garapa",
+    "meaning": "Gíria para dizer \"me faça um favor\".",
+    "phrases": [
+      "Me faça uma garapa: roda o teste de novo, viu!",
+      "Me faça uma garapa e faz o commit, meu rei!"
+    ]
+  },
+  {
+    "term": "Na tora",
+    "meaning": "Algo feito à força, na marra.",
+    "phrases": [
+      "Forçou o push na tora, viu!",
+      "Instalou na tora com sudo, viu!"
+    ]
+  },
+  {
+    "term": "Paletada",
+    "meaning": "Andar uma grande distância, fazer uma caminhada longa.",
+    "phrases": [
+      "Que paletada esse caminho de pastas, viu!",
+      "Deu uma paletada de cd pra chegar aí!"
+    ]
+  },
+  {
+    "term": "Parta a mil",
+    "meaning": "Versão diminuída de \"parta a mil quilômetros por hora\", no sentido de \"saia rápido\".",
+    "phrases": [
+      "Terminou? Parta a mil daqui, viu!",
+      "Processo lento, parta a mil!"
+    ]
+  },
+  {
+    "term": "Pegar ar",
+    "meaning": "Ficar bastante irritado, com raiva.",
+    "phrases": [
+      "Peguei ar com esse erro de sintaxe!",
+      "Vai pegar ar quando ver o log, viu!"
+    ]
+  },
+  {
+    "term": "Pipocar",
+    "meaning": "Ficar \"na pipoca\", do lado de fora da corda dos trios elétricos no Carnaval de rua de Salvador; também quem só faz promessas e nunca cumpre.",
+    "phrases": [
+      "O deploy pipocou de novo, viu!",
+      "Prometeu o fix e pipocou, né?"
+    ]
+  },
+  {
+    "term": "Quando a galinha nascer dente",
+    "meaning": "Algo improvável de acontecer.",
+    "phrases": [
+      "Zero warnings? Só quando a galinha nascer dente, viu!",
+      "Esse teste passa quando a galinha nascer dente!"
+    ]
+  },
+  {
+    "term": "Quem vai é coelho",
+    "meaning": "Forma de dizer que não tem coragem de ir a algum lugar ou fazer algo.",
+    "phrases": [
+      "Rodar isso em produção? Quem vai é coelho, viu!",
+      "Dar rm -rf aí? Quem vai é coelho!"
+    ]
+  },
+  {
+    "term": "Ronca e fuça",
+    "meaning": "Xingamento, forma ruim de chamar alguém.",
+    "phrases": [
+      "Ô ronca e fuça de processo, viu!",
+      "Esse ronca e fuça de cron acordou todo mundo!"
+    ]
+  },
+  {
+    "term": "Tá de calundu",
+    "meaning": "Estar zangado, fazendo birra.",
+    "phrases": [
+      "O compilador tá de calundu hoje, viu!",
+      "Servidor tá de calundu, não responde nada!"
+    ]
+  },
+  {
+    "term": "Vá nessa",
+    "meaning": "Usada, de forma irônica, para discordar de alguém ou desacreditar alguma situação.",
+    "phrases": [
+      "Vai funcionar de primeira? Vá nessa, viu!",
+      "Sem backup? Vá nessa!"
+    ]
+  },
+  {
+    "term": "Virado no cão",
+    "meaning": "Estar muito bravo.",
+    "phrases": [
+      "O chefe ficou virado no cão com o deploy, viu!",
+      "Tô virado no cão com esse merge!"
+    ]
   }
 ]

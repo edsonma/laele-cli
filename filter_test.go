@@ -130,12 +130,41 @@ func TestSlangDataIsValid(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(entries) != 17 {
-		t.Fatalf("expected 17 terms, got %d", len(entries))
+	if len(entries) < 17 {
+		t.Fatalf("expected at least 17 terms, got %d", len(entries))
 	}
 	for _, e := range entries {
 		if e.Term == "" || e.Meaning == "" || len(e.Phrases) == 0 {
 			t.Fatalf("incomplete entry: %+v", e)
+		}
+	}
+}
+
+// normTerm lowercases, strips accents/punctuation and a leading "é "/"estar ",
+// so "Pega a visão" and "Pegar a visão" style repeats are easy to spot.
+func normTerm(s string) string {
+	r := strings.NewReplacer("á", "a", "à", "a", "â", "a", "ã", "a", "é", "e", "ê", "e",
+		"í", "i", "ó", "o", "ô", "o", "õ", "o", "ú", "u", "ç", "c", "-", " ", ",", " ")
+	s = strings.Join(strings.Fields(r.Replace(strings.ToLower(s))), " ")
+	for _, p := range []string{"e ", "estar "} {
+		s = strings.TrimPrefix(s, p)
+	}
+	return s
+}
+
+func TestSlangTermsAreUnique(t *testing.T) {
+	entries, err := LoadSlang()
+	if err != nil {
+		t.Fatal(err)
+	}
+	seen := map[string]string{}
+	for _, e := range entries {
+		for _, variant := range strings.Split(e.Term, " / ") {
+			k := normTerm(variant)
+			if prev, dup := seen[k]; dup {
+				t.Fatalf("duplicate term %q (already have %q)", e.Term, prev)
+			}
+			seen[k] = e.Term
 		}
 	}
 }
