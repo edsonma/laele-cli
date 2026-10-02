@@ -48,7 +48,7 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* the title and the two flags stand on the same line, flags wrap under the title on narrow screens */
+/* title on the left, flags pushed to the right edge; on narrow screens the flags wrap under the title, still right-aligned */
 .brand {
   display: flex;
   flex-wrap: wrap;
@@ -58,6 +58,7 @@ body {
 
 .flags {
   flex: none;
+  margin-left: auto;
   height: clamp(6rem, 15vw, 10rem);
   width: auto;
   aspect-ratio: 340 / 205;
