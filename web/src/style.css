@@ -1,0 +1,226 @@
+:root {
+  --fachada: #f0b33a; /* amarelo de casarão do Pelourinho */
+  --anil: #15204a;
+  --azulejo: #2b52c6;
+  --cal: #fbf3e0;
+  --dende: #ff8a2a;
+
+  --display: 'Bagel Fat One', 'Arial Rounded MT Bold', system-ui, sans-serif;
+  --mono: 'Spline Sans Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--fachada);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--anil);
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.page {
+  width: min(100%, 64rem);
+  margin: 0 auto;
+  padding: clamp(1rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ---- header ---- */
+
+.head h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(4.5rem, 17vw, 10rem);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 0.9rem 0 0;
+  max-width: 34rem;
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  font-weight: 700;
+}
+
+/* ---- controls ---- */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+}
+
+.segmented {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--anil);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.segmented legend {
+  /* visible to assistive tech, shown as a caption through aria only */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.segmented label {
+  position: relative;
+  cursor: pointer;
+}
+
+.segmented label + label {
+  border-left: 2px solid var(--anil);
+}
+
+.segmented input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.segmented span {
+  display: block;
+  padding: 0.45rem 0.9rem;
+  font-weight: 700;
+}
+
+.segmented input:checked + span {
+  background: var(--anil);
+  color: var(--fachada);
+}
+
+.segmented label:has(input:focus-visible) {
+  outline: 3px solid var(--azulejo);
+  outline-offset: -3px;
+  z-index: 1;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.check input {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  accent-color: var(--anil);
+}
+
+.check input:focus-visible {
+  outline: 3px solid var(--azulejo);
+  outline-offset: 2px;
+}
+
+/* ---- terminal, framed like an azulejo panel ---- */
+
+.frame {
+  padding: 14px;
+  border-radius: 10px;
+  background-color: var(--azulejo);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%232b52c6'/%3E%3Cg fill='none' stroke='%23fbf3e0' stroke-width='1.6'%3E%3Cpath d='M20 4L36 20 20 36 4 20Z'/%3E%3Ccircle cx='20' cy='20' r='6'/%3E%3C/g%3E%3Cg fill='%23fbf3e0'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='40' cy='0' r='3'/%3E%3Ccircle cx='0' cy='40' r='3'/%3E%3Ccircle cx='40' cy='40' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  box-shadow: 0 0 0 3px var(--anil);
+}
+
+.terminal {
+  height: clamp(22rem, 62vh, 40rem);
+  padding: 12px 6px 6px 12px;
+  border-radius: 4px;
+  background: var(--anil);
+  overflow: hidden;
+}
+
+.terminal:focus-within {
+  outline: 3px solid var(--dende);
+  outline-offset: 0;
+}
+
+.terminal .xterm-viewport {
+  background-color: transparent !important;
+}
+
+/* ---- suggestions ---- */
+
+.try h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chips button {
+  padding: 0.4rem 0.8rem;
+  border: 2px solid var(--anil);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--anil);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chips button:hover {
+  background: var(--anil);
+  color: var(--fachada);
+}
+
+.chips button:focus-visible {
+  outline: 3px solid var(--azulejo);
+  outline-offset: 2px;
+}
+
+/* ---- footer ---- */
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  font-size: 0.85rem;
+}
+
+.foot a {
+  color: inherit;
+  font-weight: 700;
+}
+
+.foot a:focus-visible {
+  outline: 3px solid var(--azulejo);
+  outline-offset: 2px;
+}
+
+@media (max-width: 40rem) {
+  .terminal {
+    height: 60vh;
+  }
+  .segmented span {
+    padding: 0.45rem 0.65rem;
+  }
+}

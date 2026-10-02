@@ -72,13 +72,48 @@ Where the slang goes, for `echo a; echo b; echo c`:
 The filter is a pure bytes-in/bytes-out state machine, covered by unit tests
 (`make test`), including markers split across reads.
 
-The slang list lives in `slang.json` (term, meaning, example phrases) so the
-upcoming web version can share it.
+The slang list lives in `slang.json` (term, meaning, example phrases) and is shared by the
+CLI and the web version.
+
+## Web version
+
+`web/` is a browser version of the same joke: a terminal (xterm.js) in front of a small
+**fake shell written in TypeScript**. It is not real bash, since a website can't safely run
+one for every visitor. It has a virtual filesystem and the usual commands (`ls`, `cd`, `cat`,
+`grep`, `sort`, `head`, `tail`, `wc`, `cp`, `mv`, `rm`, `mkdir`, `touch`, `echo`, ...),
+pipes, `&&` / `||` / `;`, `>` / `>>`, quotes, `$VARS`, globs, history and Tab completion.
+
+It uses the same `slang.json` and the same placement rules as the CLI (`before`, `middle`,
+`after`, `random`), switchable from the page or with `laele -mode <m>` typed in the terminal.
+Extra commands: `giria [termo]` (search the slang, accent-insensitive) and `giria -r`.
+
+```fish
+make web-install   # npm ci
+make web-dev       # dev server with hot reload
+make web-test      # unit tests + type check
+make web-build     # static site in web/dist
+```
+
+The build is plain static files with relative URLs, so it works on GitHub Pages (including
+under `/laele-cli/`), Netlify, Vercel or any static host. The Vite project must be built from a
+full checkout because it imports `../slang.json`.
+
+To publish on GitHub Pages: in the repo settings set **Pages -> Source** to *GitHub Actions*,
+then add the ready-made workflow and run it from the Actions tab:
+
+```fish
+mkdir -p .github/workflows
+git mv web/deploy/pages.yml .github/workflows/pages.yml
+git commit -m "Add Pages deploy workflow"; and git push
+```
+
+(It is kept under `web/deploy/` because pushing files into `.github/workflows` needs a token
+with the `workflow` scope.)
 
 ## Roadmap
 
 - [x] Go CLI
-- [ ] Web version (xterm.js + a fake in-browser shell sharing `slang.json`)
+- [x] Web version (xterm.js + a fake in-browser shell sharing `slang.json`)
 
 ## Português
 

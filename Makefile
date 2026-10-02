@@ -1,13 +1,13 @@
 BIN := laele
 
-.PHONY: build test install dist clean
+.PHONY: build test install dist clean web-install web-dev web-test web-build
 
 build:
 	go build -o $(BIN) .
 
 test:
-	go vet ./...
-	go test ./...
+	go vet .
+	go test .
 
 install: build
 	install -d $(HOME)/.local/bin
@@ -21,3 +21,17 @@ dist:
 
 clean:
 	rm -rf $(BIN) dist
+
+# --- web version (see web/) ---
+
+web-install:
+	cd web && npm ci
+
+web-dev:
+	cd web && npm run dev
+
+web-test:
+	cd web && npm test && npm run typecheck
+
+web-build:
+	cd web && npm run build

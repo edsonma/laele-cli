@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="laele: um terminal que fala baianês. Cada comando vem com uma gíria de Salvador, viu!" />
+    <title>laele: terminal com gíria de Salvador</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌴%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="head">
+        <h1>laele</h1>
+        <p class="lede">Um terminal que fala baianês: cada comando vem com uma gíria de Salvador, viu!</p>
+      </header>
+
+      <div class="controls">
+        <fieldset class="segmented">
+          <legend>Onde entra a gíria</legend>
+          <label><input type="radio" name="mode" value="before" checked /><span>Antes</span></label>
+          <label><input type="radio" name="mode" value="middle" /><span>No meio</span></label>
+          <label><input type="radio" name="mode" value="after" /><span>Depois</span></label>
+          <label><input type="radio" name="mode" value="random" /><span>Aleatório</span></label>
+        </fieldset>
+        <label class="check"><input type="checkbox" id="meaning" /><span>Mostrar o significado</span></label>
+      </div>
+
+      <div class="frame">
+        <div id="terminal" class="terminal" role="application" aria-label="Terminal interativo do laele"></div>
+      </div>
+
+      <section class="try" aria-labelledby="try-title">
+        <h2 id="try-title">Experimente</h2>
+        <div class="chips">
+          <button type="button" data-cmd="ls">ls</button>
+          <button type="button" data-cmd="cat giria.txt | grep -i baba">cat giria.txt | grep -i baba</button>
+          <button type="button" data-cmd="giria barril">giria barril</button>
+          <button type="button" data-cmd="laele -mode random">laele -mode random</button>
+          <button type="button" data-cmd="help">help</button>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <a href="https://github.com/edsonma/laele-cli">Código no GitHub</a>
+        <span>A versão de linha de comando roda o bash de verdade. Esta aqui é uma imitação que vive no navegador.</span>
+      </footer>
+    </main>
+    <script type="module" src="/src/entry.ts"></script>
+  </body>
+</html>
