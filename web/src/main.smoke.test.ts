@@ -82,6 +82,23 @@ describe('page wiring', () => {
     expect(new Set(ids).size).toBe(ids.length) // inline SVGs must not share ids
   })
 
+  it('header shows the Salvador and Bahia flags with the right designs', () => {
+    const svg = document.querySelector('header .brand svg.flags')!
+    expect(svg.getAttribute('role')).toBe('img')
+    const label = document.getElementById(svg.getAttribute('aria-labelledby')!)!.textContent!
+    expect(label).toMatch(/Salvador/)
+    expect(label).toMatch(/Bahia/)
+
+    const [salvador, bahia] = [...svg.querySelectorAll(':scope > g')]
+    // Bahia: four stripes red, white, red, white (top to bottom), a blue square, a white triangle
+    const bahiaFills = [...bahia!.querySelectorAll(':scope > path')].map((p) => p.getAttribute('fill'))
+    expect(bahiaFills).toEqual(['#D8232F', '#FBF3E0', '#D8232F', '#FBF3E0', '#1F5FBF', '#FBF3E0', 'none'])
+    // Salvador: royal blue field, a white dove carrying an olive branch with exactly three green leaves
+    expect(salvador!.querySelector(':scope > path')!.getAttribute('fill')).toBe('#1F4BB8')
+    expect(salvador!.querySelectorAll('path[fill="#3E9B48"]')).toHaveLength(3)
+    expect(salvador!.querySelectorAll('path[fill="#FBF3E0"]').length).toBeGreaterThanOrEqual(3) // body, tail, wing
+  })
+
   it('footer credits the author and company and states the Bash GPL licensing', () => {
     const foot = document.querySelector('footer')!
     expect(foot.textContent).toContain('Edson Ma')

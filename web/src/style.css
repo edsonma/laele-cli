@@ -48,6 +48,21 @@ body {
   letter-spacing: -0.02em;
 }
 
+/* the title and the two flags stand on the same line, flags wrap under the title on narrow screens */
+.brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.5rem clamp(1rem, 3.5vw, 2.5rem);
+}
+
+.flags {
+  flex: none;
+  height: clamp(6rem, 15vw, 10rem);
+  width: auto;
+  aspect-ratio: 340 / 205;
+}
+
 .lede {
   margin: 0.9rem 0 0;
   max-width: 34rem;
