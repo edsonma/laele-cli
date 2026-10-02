@@ -159,7 +159,7 @@ describe('ls', () => {
     expect(run('ls')).not.toContain('.bashrc')
     expect(run('ls -a')).toContain('.bashrc')
     const piped = run('ls | cat')
-    expect(piped.split('\n').filter(Boolean)).toEqual(['giria.txt', 'Pelourinho', 'README.md'])
+    expect(piped.split('\n').filter(Boolean)).toEqual(['Capoeira', 'giria.txt', 'Pelourinho', 'README.md'])
     expect(sh.execute('ls | cat', 80).output).not.toMatch(/\x1b\[1;34m/)
   })
   it('colors directories only on the terminal', () => {

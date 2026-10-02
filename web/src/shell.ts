@@ -215,7 +215,7 @@ function seedFilesystem(vfs: VFS): void {
     const err = vfs.writeFile(path, content)
     if (err) throw new Error(`seed ${path}: ${err}`)
   }
-  for (const d of [HOME + '/Pelourinho', '/tmp', '/etc']) vfs.mkdir(d, true)
+  for (const d of [HOME + '/Pelourinho', HOME + '/Capoeira', '/tmp', '/etc']) vfs.mkdir(d, true)
 
   w(
     HOME + '/README.md',
@@ -245,6 +245,10 @@ Digite help pra ver os comandos.
   w(
     HOME + '/Pelourinho/farol-da-barra.txt',
     'O Farol da Barra é um dos cartões-postais de Salvador. O pôr do sol dali é barril, viu!\n',
+  )
+  w(
+    HOME + '/Capoeira/roda.txt',
+    'Na roda de capoeira o berimbau dá o ritmo, dois jogam no meio e todo mundo canta e bate palma, viu!\n',
   )
   w('/etc/hostname', 'salvador\n')
 }

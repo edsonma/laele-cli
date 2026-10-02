@@ -197,6 +197,61 @@ body {
   outline-offset: 2px;
 }
 
+/* ---- illustrations ---- */
+
+.places h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+}
+
+/* column widths follow each drawing's aspect ratio, so all three come out the same height */
+.panels {
+  display: grid;
+  grid-template-columns: 400fr 560fr 300fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.panel {
+  margin: 0;
+}
+
+.panel svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--anil);
+  border-radius: 6px;
+  background: var(--anil);
+}
+
+.panel figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.85rem;
+  max-width: 44ch;
+}
+
+.panel strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 56rem) {
+  .panels {
+    grid-template-columns: 1fr 1fr;
+  }
+  .panel-wide {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+}
+
+@media (max-width: 36rem) {
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- footer ---- */
 
 .foot {

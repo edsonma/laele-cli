@@ -85,6 +85,8 @@ pipes, `&&` / `||` / `;`, `>` / `>>`, quotes, `$VARS`, globs, history and Tab co
 
 It uses the same `slang.json` and the same placement rules as the CLI (`before`, `middle`,
 `after`, `random`), switchable from the page or with `laele -mode <m>` typed in the terminal.
+The page also shows three original SVG illustrations (capoeira, Pelourinho, acarajé), drawn
+inline in `web/index.html`, so there are no image files to host or license.
 Extra commands: `giria [termo]` (search the slang, accent-insensitive) and `giria -r`.
 
 ```fish

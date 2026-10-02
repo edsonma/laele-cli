@@ -58,6 +58,25 @@ describe('page wiring', () => {
     expect(document.querySelectorAll('.chips button').length).toBeGreaterThanOrEqual(3)
   })
 
+  it('shows the three illustrations, each with an accessible name and nothing fetched remotely', () => {
+    const figs = [...document.querySelectorAll<HTMLElement>('.panel')]
+    expect(figs).toHaveLength(3)
+    for (const f of figs) {
+      const svg = f.querySelector('svg[role="img"]')
+      expect(svg, f.textContent ?? '').not.toBeNull()
+      const labelId = svg!.getAttribute('aria-labelledby')!
+      expect(document.getElementById(labelId)?.textContent?.length ?? 0).toBeGreaterThan(20)
+      expect(f.querySelector('figcaption strong')?.textContent).toBeTruthy()
+    }
+    const names = figs.map((f) => f.querySelector('strong')!.textContent)
+    expect(names).toEqual(['Capoeira', 'Pelourinho', 'Acarajé'])
+    // published pages can't load remote images, so everything has to be inline
+    expect(document.querySelectorAll('img')).toHaveLength(0)
+    expect(document.body.innerHTML).not.toMatch(/(?:src|href|xlink:href)="https?:\/\/(?!github\.com)/)
+    const ids = [...document.querySelectorAll('[id]')].map((e) => e.id)
+    expect(new Set(ids).size).toBe(ids.length) // inline SVGs must not share ids
+  })
+
   it('every suggestion chip is a command the shell actually understands', async () => {
     const { Shell } = await import('./shell')
     const sh = new Shell(() => 0)
